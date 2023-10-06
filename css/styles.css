@@ -129,6 +129,15 @@ address {
 /* --------------Dark----------- */
 .dark {
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/dark/dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   margin-right: auto;
   margin-left: auto;
   height: 600px;
@@ -255,10 +264,30 @@ address {
   margin-bottom: 32px;
   text-align: center;
 }
-
+.soc {
+}
+.team-soc-list {
+  display: flex;
+  gap: 24px;
+}
+.team-soc-item {
+}
+.team-soc-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  fill: #f4f4fd;
+  /* border: 2px dashed #404bbf; */
+  border-radius: 50%;
+  background-color: #404bbf;
+}
+.soc-icons {
+  width: 16px;
+  height: 16px;
+}
 .team-img {
-  /* width: 264px;
-  height: 260px; */
 }
 /* -------------------------------- */
 
