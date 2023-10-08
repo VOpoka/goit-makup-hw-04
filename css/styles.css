@@ -57,101 +57,96 @@ address {
 /* --------------Heder----------- */
 .header {
   border-bottom: 1px solid #e7e9fc;
-  background: #fff;
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 .header-navigation {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 .header-logo {
   color: #4d5ae5;
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-flex;
   margin-right: 76px;
-  padding: 24px 0;
 }
-.logo-shade {
+.header-logo-black {
   color: #2e2f42;
 }
-.header-item {
-  display: inline-flex;
-  align-items: flex-start;
+.menu-list {
+  display: flex;
   gap: 40px;
-  justify-content: center;
-}
-
-.header-list {
-  /* padding: 24px 0; */
+  margin: 0;
+  padding: 0;
 }
 .header-menu-link {
   color: #2e2f42;
-  font-size: 16px;
+  position: relative;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* padding: 24px 0; */
+  font-size: 16px;
+  padding: 24px 0;
   display: block;
-  padding-top: 24px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.header-menu-link::after {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 4px;
-  border-radius: 2px;
-  background: #fff;
-  margin-top: 20px;
-  transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-menu-link:hover::after {
-  background: #404bbf;
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus {
+.now {
+  position: relative;
   color: #404bbf;
 }
-.address {
+
+.now::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+.header-menu-link:hover,
+.header-menu-link:focus,
+.header-logo:active {
+  color: #404bbf;
+}
+
+.adress {
   font-style: normal;
-  margin-left: auto;
-}
-.address-item {
   display: flex;
-  align-items: end;
-  gap: 40px;
+  align-items: center;
 }
-.address-header-link {
+
+.adress-menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+.adress-menu-link {
   color: #434455;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  gap: 40px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address-header-link:hover,
-.address-header-link:focus {
+.adress-menu-link:hover,
+.adress-menu-link:focus,
+.address-menu-link:active {
   color: #404bbf;
 }
 /* -------------------------------- */
@@ -160,6 +155,7 @@ address {
 .dark {
   background-color: #2e2f42;
   background-image: linear-gradient(
+      to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
@@ -167,10 +163,10 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
-  height: 600px;
+  max-height: 600px;
   padding: 188px 0;
 }
 .dark-title {
@@ -204,7 +200,7 @@ address {
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
-  transition-property: background;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -219,27 +215,7 @@ address {
 .feature {
   padding: 120px 0;
 }
-.feature-icon-ps {
-  padding: 0 120px;
-}
-.feature-restangle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 264px;
-  height: 112px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  border: 1px solid #8e8f99;
-  background: #f4f4fd;
-}
-.icon-ps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
-  gap: 24px;
-}
+
 .feature-list {
   display: flex;
   gap: 24px;
@@ -261,42 +237,52 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.feature-icon-ps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+}
 /* -------------------------------- */
 
 /* --------------Team------------- */
 
 .team {
   background-color: #f4f4fd;
-  margin-top: 0;
   padding: 120px 0;
+}
+.team-container {
+  max-width: 100%;
 }
 .team-title {
   color: #2e2f42;
   font-size: 36px;
-  font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 72px;
-  flex-shrink: 0;
 }
 .team-item {
   display: flex;
   justify-content: center;
-  margin-bottom: 72px;
+  padding: 0;
+  margin: 0;
   gap: 24px;
 }
 .team-list {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-content {
-  text-align: center;
   padding: 32px 0;
 }
 .team-subtitle {
@@ -305,7 +291,6 @@ address {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-top: 32px;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -314,19 +299,13 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 32px;
   text-align: center;
-}
-
-.soc {
+  padding-bottom: 8px;
 }
 .soc-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 24px;
-}
-.soc-item {
+  justify-content: center;
 }
 .soc-link {
   display: flex;
@@ -336,7 +315,8 @@ address {
   height: 100%;
   fill: #f4f4fd;
   border-radius: 50%;
-  background-color: #404bbf;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -------------------------------- */
