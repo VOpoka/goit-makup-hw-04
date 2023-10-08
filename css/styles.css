@@ -39,7 +39,7 @@ address {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 .visually-hidden {
   position: absolute;
@@ -142,7 +142,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   gap: 40px;
-  transition-property: background;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -458,7 +458,6 @@ address {
   display: inline-block;
   margin-bottom: 16px;
 }
-
 .footer-logo-shade {
   color: #f4f4fd;
 }
@@ -470,10 +469,11 @@ address {
   letter-spacing: 0.02em;
   max-width: 264px;
 }
+
 .footer-soc-blok {
   display: inline-block;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   margin-left: 120px;
 }
 
@@ -484,12 +484,16 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   display: block;
-  padding-top: 0;
+
   padding-bottom: 16px;
 }
-.soc-list {
+.footer-soc-list {
   display: flex;
-  padding-top: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  /* padding-left: 355px;
+  padding-bottom: 132px; */
 }
 .footer-soc-link {
   display: flex;
