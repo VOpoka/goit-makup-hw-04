@@ -155,11 +155,10 @@ address {
 .dark {
   background-color: #2e2f42;
   background-image: linear-gradient(
-      to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/dark/dark.png);
+    url(../images/dark/dark.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -318,6 +317,10 @@ address {
   background-color: #4d5ae5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.soc-link:hover,
+.soc-link:focus {
+  background-color: #404bbf;
+}
 
 /* -------------------------------- */
 
@@ -353,20 +356,14 @@ address {
 }
 .portfolio-list {
   width: calc((100% - 48px) / 3);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  background: #fff;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-list:hover .portfolio-cover-text {
-  transform: translateY(0);
+.portfolio-list:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-content {
   padding: 32px 16px;
-  margin-bottom: 8px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
@@ -384,20 +381,9 @@ address {
   height: 100%;
   width: 100%;
   transform: translateY(100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-cover-blok {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-bottom: 164px;
-  padding-right: 32px;
-  display: flex;
-  align-items: center;
-}
+
 .portfolio-subtitle {
   color: #2e2f42;
   font-size: 20px;
@@ -405,17 +391,16 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-  margin-left: 16px;
 }
 .portfolio-text {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 32px;
-  margin-left: 16px;
 }
-
+.portfolio-list:hover .portfolio-cover-text {
+  transform: translateY(0);
+}
 .portfolio-img {
 }
 /* ------------------------------- */
@@ -490,7 +475,9 @@ address {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-soc-link:hover,
+.footer-soc-link:hover {
+  background-color: #31d0aa;
+}
 .footer-soc-link:focus {
   background-color: #31d0aa;
 }
